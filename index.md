@@ -1,7 +1,7 @@
 ## Welcome to GitHub Pages
   echarts虽然很好上手，但是我们在使用过程中，不免也会遇到一些让人抓狂的问题，下面这些是我在用的过程中，遇到的问题，或许这只是一点已问题，但是，如果刚好你也遇到了，可以参考一下^-^
 
-##增加y轴名字以及各种样式 yAxis: {}
+### 增加y轴名字以及各种样式 yAxis: {}
 ```
 - 增加名字
   在对象中添加属性     name:'增长速度',
@@ -17,12 +17,12 @@
   添加属性 splitLine:{show: true,lineStyle(网格线条的样式): {color:['red'],width:1,type:'solid'}}
 
 ```
-## 改变折线图折点的样式
+### 改变折线图折点的样式
 ```
 - 将折点由空心变成实心
   在series:[{}]数组的对象中增加   symbol:'circle',
 ```
-## 改边图标右上角的切换图标样式
+### 改边图标右上角的切换图标样式
 ```
 http://echarts.baidu.com/option.html#toolbox.iconStyle
 首先是toolbox{iconStyle：{normal：{}，emphasis:{}}}
@@ -33,7 +33,7 @@ http://echarts.baidu.com/option.html#toolbox.iconStyle
 
 ```
 
-## 使用echarts做折线图的时候，想要任意切换折线图、柱状图，返回，下载、导出等，怎么做？
+### 使用echarts做折线图的时候，想要任意切换折线图、柱状图，返回，下载、导出等，怎么做？
 ```
    直接在option中设置 toolbox: {
                          feature: {
@@ -46,24 +46,24 @@ http://echarts.baidu.com/option.html#toolbox.iconStyle
             }
 
 ```
-## 使用echarts地图功能的时候，怎么将地图引入
+### 使用echarts地图功能的时候，怎么将地图引入
 ```
    导入jquery（为了之后请求数据使用）、echarts.js、china.js（这是中国地图的js，还有对应的json文件一并获取，其他各省的或者世界地 图的这个网址http://echarts.baidu.com/download-map.html获取）
 ```
 
-## 使用echarts进行节点操作的时候，怎么进行操作
+### 使用echarts进行节点操作的时候，怎么进行操作
 ```
    myChart.on('click', function (params) {
             console.log(params);
         });
 ```
 
-## 当进行dom操作的时候，阻止冒泡实现不了（event用不了）
+### 当进行dom操作的时候，阻止冒泡实现不了（event用不了）
 ```
    在echarts中的event事件和我们平时js中的event不一样，所以要在别处进行原始event的保存，然后在echarts中进行使用
 
 ```
-## echarts力导图中节点进行更改形状或者大小，或者指定形状怎么做？
+### echarts力导图中节点进行更改形状或者大小，或者指定形状怎么做？
 ```
    使用option -> series -> nodes -> symbolSize: 数值  --->更改节点的大小
       使用option -> series -> nodes -> symbol: 'circle'或者 'rect'或者 'roundRect'或者 'triangle'或者 'diamond'或者 'pin'或者 'arrow' 或
@@ -71,7 +71,7 @@ http://echarts.baidu.com/option.html#toolbox.iconStyle
 
 ```
 
-## echarts图怎么能够获取他的某一帧的图片？
+### echarts图怎么能够获取他的某一帧的图片？
 ```
    首先要有一个canvas的盒子，对canvas盒子进行宽高的设置，以及初始化之后进行放置；
      1）var offcanvas = myChart.getRenderedCanvas({pixelRatio: 1,});
@@ -86,7 +86,7 @@ http://echarts.baidu.com/option.html#toolbox.iconStyle
     3）根据需要执行这个函数，设置判断逻辑
 ```
 
-## 使用require和angular的时候引用echarts，报错，说明echarts这个服务没有被注入？
+### 使用require和angular的时候引用echarts，报错，说明echarts这个服务没有被注入？
 ```
   这个属于粗心问题，但是对于新手的我，确实找了一会呢
   在app中进行配置服务app.factory('echarts',function(){return echarts;});
